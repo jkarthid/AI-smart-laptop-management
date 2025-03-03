@@ -1,5 +1,4 @@
 # Requirements for AI Smart Laptop Management
-
 # Core dependencies
 psutil>=5.9.0
 pywin32>=305
