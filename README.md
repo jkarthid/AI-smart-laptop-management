@@ -28,7 +28,7 @@ An intelligent system that uses local LLMs (via Ollama) to monitor and manage Wi
 
 1. Clone this repository:
    ```
-   git clone -b develop https://github.com/yourusername/ai-smart-laptop-management.git
+   git clone -b develop https://github.com/jkarthid/AI-smart-laptop-management.git
    cd ai-smart-laptop-management
    ```
 
