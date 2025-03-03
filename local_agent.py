@@ -50,7 +50,7 @@ class LocalAgent:
         self.action_executor = ActionExecutor()
         
         # Initialize Ollama interface with the configured model
-        model_name = self.config.get('llm_model', 'llama2')
+        model_name = self.config.get('llm_model', 'llama3.2:1b')
         self.ollama = OllamaInterface(model_name)
         
         logger.info(f"Local Agent initialized with model: {model_name}")
@@ -71,7 +71,7 @@ class LocalAgent:
             else:
                 # Default configuration
                 default_config = {
-                    'llm_model': 'llama2',
+                    'llm_model': 'llama3.2:1b',
                     'api_base': 'http://localhost:11434',
                     'system_check_interval': 60,  # seconds
                     'log_level': 'INFO'
