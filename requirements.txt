@@ -1,12 +1,11 @@
 # Requirements for AI Smart Laptop Management
-
 # Core dependencies
 psutil>=5.9.0
 pywin32>=305
 requests>=2.28.0
 
 # Logging and utilities
-logging>=0.5.1.2
+# logging module is part of the standard library, no need to include it
 
 # Optional dependencies for GUI (if implemented)
 # PyQt5>=5.15.6

@@ -93,7 +93,11 @@ class DataProcessor:
         # System resource usage
         features['high_cpu'] = data.get('cpu_usage', 0) > self.threshold_config['cpu_usage']
         features['high_memory'] = data.get('memory_usage', 0) > self.threshold_config['memory_usage']
-        features['high_disk'] = data.get('disk_usage', 0) > self.threshold_config['disk_usage']
+        # Handle disk_usage which is a dictionary with a 'percent' key
+        if isinstance(data.get('disk_usage'), dict):
+            features['high_disk'] = data.get('disk_usage', {}).get('percent', 0) > self.threshold_config['disk_usage']
+        else:
+            features['high_disk'] = False
         
         # Battery status
         if 'battery' in data:

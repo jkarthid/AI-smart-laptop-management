@@ -20,6 +20,7 @@ import psutil
 import win32api
 import win32con
 import win32evtlog
+import win32evtlogutil
 
 logger = logging.getLogger('system_sensors')
 

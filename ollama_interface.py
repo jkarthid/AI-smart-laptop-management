@@ -119,7 +119,7 @@ if __name__ == '__main__':
     )
     
     # Create Ollama interface
-    ollama = OllamaInterface('llama2')
+    ollama = OllamaInterface('llama3.2:1b')
     
     # Test generating a response
     test_data = {
